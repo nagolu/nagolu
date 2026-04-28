@@ -1,0 +1,44 @@
+:root {
+  --bg: #0b0e14;
+  --panel: #121826;
+  --line: #202a3d;
+  --text: #e9edf6;
+  --muted: #9ca8c3;
+  --brand: #77a8ff;
+  --good: #17b26a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(11,14,20,.85); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 16px;
+}
+.brand { font-weight: 700; color: var(--brand); }
+nav { display: flex; gap: 8px; }
+button { border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; color: var(--text); background: #1b2335; }
+button.primary { background: var(--brand); color: #081024; border-color: transparent; font-weight: 700; }
+button.ghost { background: transparent; }
+main { max-width: 960px; margin: 0 auto; padding: 16px; display: grid; gap: 12px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+.muted { color: var(--muted); }
+.filters { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+select { width: 100%; background: #0f1523; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 10px; }
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.tab.active { border-color: var(--brand); }
+.posts { display: grid; gap: 10px; }
+.post { border: 1px solid var(--line); border-radius: 12px; padding: 12px; background:#0f1523; }
+.actions { display: flex; gap: 8px; margin-top: 8px; }
+.grid.two { display: grid; gap: 10px; }
+@media (min-width: 768px){
+  .filters { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .grid.two { grid-template-columns: 1fr 1fr; }
+}
+.pill { display:inline-block; font-size:.75rem; padding:4px 8px; border-radius:999px; background: #0a3520; color:#7ce5ac; border:1px solid #155f3f; }
