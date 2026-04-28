@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nagolu — Hyper-local Community</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Nagolu</div>
+    <nav>
+      <button class="ghost">Home</button>
+      <button class="ghost">Explore</button>
+      <button class="primary">Signup</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>Hyper-local community platform</h1>
+      <p class="muted">One primary community per user. Explore any community from Home.</p>
+      <div class="filters">
+        <select><option>Country: UK</option></select>
+        <select><option>City: Sheffield</option></select>
+        <select><option>Area: City Centre</option></select>
+        <select><option>Community: Telugu</option></select>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>My Community</h2>
+      <div class="tabs" id="tabs"></div>
+      <button class="primary">+ Post</button>
+      <div id="posts" class="posts"></div>
+    </section>
+
+    <section class="card grid two">
+      <article>
+        <h3>MVP tech stack</h3>
+        <ul>
+          <li>Frontend: Next.js + TypeScript + Tailwind</li>
+          <li>Backend: Node.js (NestJS) + REST APIs</li>
+          <li>DB: PostgreSQL + Redis cache</li>
+          <li>Search: PostgreSQL FTS (MVP), OpenSearch (scale)</li>
+          <li>Storage: S3-compatible object storage</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Core architecture</h3>
+        <ul>
+          <li>Auth + profile (primary community)</li>
+          <li>Community feed service (5 categories)</li>
+          <li>Messaging + inbox service</li>
+          <li>Notifications service (in-app + push + email)</li>
+          <li>Moderation service (reporting + spam checks)</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Implementation Plan (MVP → Scale)</h2>
+      <ol>
+        <li><strong>Week 1-2:</strong> Auth, community model, tabbed feed, create/comment/ask flows.</li>
+        <li><strong>Week 3-4:</strong> Services directory + ratings/reviews + expiry jobs.</li>
+        <li><strong>Week 5:</strong> Inbox, notifications, unread counters, urgent visibility.</li>
+        <li><strong>Week 6:</strong> Moderation console, spam throttling, block/report tools.</li>
+        <li><strong>Future:</strong> Trust score, verified providers, payments, promoted listings.</li>
+      </ol>
+      <p class="muted">Includes dummy data for Feed/Services/Travel/Sale/Urgent with comments and private Ask actions.</p>
+    </section>
+    <section class="card"><h2>Additional Pages</h2><ul><li>Signup/Login</li><li>Messages Inbox</li><li>Notifications</li><li>User Profile</li><li>Admin Panel</li></ul></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
